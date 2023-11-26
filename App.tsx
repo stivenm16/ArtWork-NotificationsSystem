@@ -23,7 +23,6 @@ export default function App() {
   useEffect(() => {
     requestUserPermission();
     getToken();
-    return () => {};
   }, []);
 
   return (
