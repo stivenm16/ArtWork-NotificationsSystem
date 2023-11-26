@@ -48,7 +48,7 @@ const ArtWorkDetailed = ({route, navigation}: any) => {
   return (
     <SafeAreaView style={styles.container}>
       <Layout>
-        {artWorkDetailed ? (
+        {artWorkDetailed && artWorkDetailed.img.imgCode ? (
           <>
             <Image
               source={{

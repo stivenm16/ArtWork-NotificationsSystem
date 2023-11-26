@@ -1,4 +1,4 @@
-import {config} from '@gluestack-ui/config'; // Optional if you want to use default theme
+import {config} from '@gluestack-ui/config';
 import {GluestackUIProvider} from '@gluestack-ui/themed';
 import messaging from '@react-native-firebase/messaging';
 import {useEffect} from 'react';
@@ -15,14 +15,16 @@ export default function App() {
     }
   }
 
-  const getToken = async () => {
-    const token = await messaging().getToken();
-    console.log(token, '<------ token ');
-  };
+  // This method retrieves the firebase token to set up scheduled notifications
+  // const getToken = async () => {
+  //   const token = await messaging().getToken();
+
+  //   console.log(token, '<-- Firebase Token ');
+  // };
 
   useEffect(() => {
     requestUserPermission();
-    getToken();
+    // getToken();
   }, []);
 
   return (
